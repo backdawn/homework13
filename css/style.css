@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(201, 181, 154);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.container-in{
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+.container-in h1{
+  color: #fff;
+  font-size: 25px;
+}
+.card-body{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;align-items: center;
+}
+.card-body input{
+  width: 70%;
+  height: 25px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid rgb(39, 161, 230);
+  color: #000;
+  padding: 5px 10px;
+}
+.card-body button{
+  /* width: auto; */
+  width: 20%;
+  height: 100%;
+  background-color: rgb(88, 122, 207);
+  color: #fff;
+  outline: none;
+  border: none;
+  height: 35px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+#listTodo{
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 0 10px;
+  width: 100%;
+}
+#listTodo .btn{
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: rgb(217, 53, 53);
+  font-size: 15px;
+  height: 30px;
+}
+#listTodo .btn:first-child{
+  order: 1;
+}
+#listTodo .btn:last-child{
+  background-color: rgb(147, 219, 98);
+  margin-right: 10px;
+}
+.output{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 98%;
+  background-color: rgb(76, 152, 154);
+  margin-top: 20px;
+  padding: 5px 10px ;
+  border-radius: 8px;
+}
