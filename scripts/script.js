@@ -2,6 +2,7 @@ let addTodo = document.getElementById("addTodo");
 // let clearTodo = document.getElementById("clearTodo");
 let inputText = document.getElementById("addInput");
 let listTodo = document.getElementById("listTodo");
+let btnTodo = document.getElementById("btnTodo");
 
 addTodo.addEventListener("click",
 function(){
@@ -32,6 +33,7 @@ function(){
     })
 
     todo.append(removeBtn,fulfilledBtn);
+    listTodo.append(todo);
     listTodo.append(todo);
 })
 // clearTodo.addEventListener("click",

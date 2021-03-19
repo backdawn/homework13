@@ -42,15 +42,14 @@ body {
   padding: 5px 10px;
 }
 .card-body button{
-  /* width: 20px; */
+  width: фгещ;
   height: 100%;
   background-color: rgb(88, 122, 207);
   color: #fff;
   outline: none;
   border: none;
   height: 35px;
-  font-size: 15px;
-  padding: 5px 30px;
+  padding: 0px 30px;
   border-radius: 6px;
 }
 #listTodo{
@@ -86,4 +85,19 @@ body {
   margin-top: 20px;
   padding: 5px 10px ;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 600px){
+  .card-body button{
+    font-size: 10px;
+  }
+  .card-body input{
+    width: 50%;
+  }
+  .output{
+    flex-flow: column wrap;
+  }
+  #listTodo .btn:last-child{
+    margin: 0;
+  }
 }
