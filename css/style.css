@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: rgb(219, 169, 130);
   width: 100vw;
   height: 100vh;
@@ -99,5 +99,41 @@ body {
   }
   #listTodo .btn:last-child{
     margin: 0;
+  }
+} */
+#listTodo{
+  color: #fff;
+  padding: 0px 10px;
+  border-radius: 8px;
+}
+#listTodo .btn{
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: rgb(217, 53, 53);
+  font-size: 15px;
+  height: 30px;
+  margin: 5px;
+}
+#listTodo .btn:first-child{
+  background-color: rgb(38, 124, 46);
+}
+.text{
+  width: 80%;
+}
+.buttons{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+@media screen and (max-width: 500px){
+  .card-body .btn{
+    width: 100%;
+  }
+  .card-header{
+    text-align: center;
   }
 }

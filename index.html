@@ -4,20 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Home work 13</title>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="container-in">
             <h1>Todo List</h1>
             <div class="card-body">
                 <input id="addInput" type="text" placeholder="Введите задачу">
                 <button id="addTodo" name="button">Добавить</button>
-                <!-- <button id="clearTodo" name="button">Очистить</button> -->
+                 <button id="clearTodo" name="button">Очистить</button>
             </div>
             <div id="listTodo"></div>
         </div>
-    </div>
+    </div> -->
+
+    <div class="container">
+          <div class="card mt-5">
+              <div class="card-header">Todo List</div>
+              <div class="card-body">
+                  <input type="text" id="addInput" name="addInput" placeholder="Введите задачу" class="form-control">
+                  <button id="addTodo" name="button" class="btn btn-primary mt-2 mb-3 justify-end">Добавить</button>
+                 <div id="listTodo">
+                   <div id="buttons"></div>
+                 </div>
+            </div>
+          </div>
+      </div>
 
     <script src="scripts/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
