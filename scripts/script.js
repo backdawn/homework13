@@ -1,37 +1,35 @@
-$('#exampleModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-
-let exampleModal = document.getElementById('exampleModal')
 let addTodo = document.getElementById("addTodo");
 let inputText = document.getElementById("addInput");
 let listTodo = document.getElementById("listTodo");
 let buttons = document.getElementById("buttons");
-addTodo.addEventListener("click",function(){
-    let todoText = inputText.value
-    // inputText.value = ""
+let inputChange = document.getElementById("inputChange");
+let textInTodo = document.getElementsByClassName('text');
 
+addTodo.addEventListener("click",function(){
+
+
+
+    let todoText = inputText.value
     let todo = document.createElement("DIV")
     todo.classList.add("alert","alert-primary")
 
     let text = document.createElement("DIV")
     text.classList.add("text")
-    text.innerHTML = todoText + " "
-
+    text.innerHTML = todoText + ""
 
     let buttonsDiv = document.createElement("DIV")
     buttonsDiv.classList.add("buttons")
 
-    // todo.classList.add("buttons")
-    // todo.innerHTML = removeBtn, fulfilledBtn;
-
     let changeBtn = document.createElement("BUTTON")
     changeBtn.classList.add("btn")
     changeBtn.setAttribute("data-toggle", "modal")
-    changeBtn.setAttribute("data-target", "#exampleModalCenter")
+    changeBtn.setAttribute("data-target", "#exampleModal")
     changeBtn.innerHTML = "Редактировать"
     changeBtn.addEventListener("click", function(){
-      console.log(222222222);
+      $('#exampleModal').on('shown.bs.modal', function (event) {
+        console.log(event);
+      })
+      console.log(text.relatedTarget.firstChild.innerText);
     })
 
     let removeBtn = document.createElement("BUTTON")
@@ -47,6 +45,7 @@ addTodo.addEventListener("click",function(){
     fulfilledBtn.addEventListener("click", function(){
       todo.style.opacity = 0.5;
     })
+
     if (todoText !== '' && todoText !== ' ') {
       buttonsDiv.append(changeBtn, fulfilledBtn, removeBtn);
       todo.append(text, buttonsDiv)
