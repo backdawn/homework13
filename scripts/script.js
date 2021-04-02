@@ -4,10 +4,9 @@ let listTodo = document.getElementById("listTodo");
 let buttons = document.getElementById("buttons");
 let inputChange = document.getElementById("inputChange");
 let textInTodo = document.getElementsByClassName('text');
+let saveChange = document.getElementById('saveChange');
 
 addTodo.addEventListener("click",function(){
-
-
 
     let todoText = inputText.value
     let todo = document.createElement("DIV")
@@ -25,11 +24,11 @@ addTodo.addEventListener("click",function(){
     changeBtn.setAttribute("data-toggle", "modal")
     changeBtn.setAttribute("data-target", "#exampleModal")
     changeBtn.innerHTML = "Редактировать"
+
     changeBtn.addEventListener("click", function(){
-      $('#exampleModal').on('shown.bs.modal', function (event) {
-        console.log(event);
+      $('#exampleModal').on('shown.bs.modal', function () {
+        inputChange.value = text.textContent.trim()
       })
-      console.log(text.relatedTarget.firstChild.innerText);
     })
 
     let removeBtn = document.createElement("BUTTON")
@@ -42,8 +41,16 @@ addTodo.addEventListener("click",function(){
     let fulfilledBtn = document.createElement("BUTTON");
     fulfilledBtn.classList.add("btn")
     fulfilledBtn.innerHTML = "Выполнить";
+
+    let cout = 0;
     fulfilledBtn.addEventListener("click", function(){
-      todo.style.opacity = 0.5;
+      if (cout === 0) {
+        todo.style.opacity = 0.5;
+        cout = 1;
+      } else{
+        todo.style.opacity = 1;
+        cout = 0;
+      }
     })
 
     if (todoText !== '' && todoText !== ' ') {
@@ -55,4 +62,7 @@ addTodo.addEventListener("click",function(){
       addInput.style = "border-color: red"
     }
 
+    saveChange.addEventListener("click",function(){
+      text.innerHTML = inputChange.value;
+    })
 })
